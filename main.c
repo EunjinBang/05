@@ -5,17 +5,33 @@
 
 int main(int argc, char *argv[]) {
 	
-	int x;
-	int sum=0;
-	int i;
+	int x, y;
+	char op;
+	int result;
 	
-	printf("input a number :");
-	scanf("%d",&x);
+	printf("enter the calculation :");
+	scanf("%d %c %d", &x, &op, &y);
 	
-	for(i=0; i<=x ; i++)
+	if(op =='+')
 	{
-		sum = sum + i;
+		result = x+y;
+		printf("%d",result);
 	}
-	printf("The result is %d\n", sum);
+	else if(op == '-')
+	{
+		result = x-y;
+		printf("%d",result);
+	}
+		
+	else if(op == '*')
+	{
+		result = x*y;
+		printf("%d",result);
+	}
+	else
+	{
+		result = x/y;
+		printf("%d",result);
+	}
 	return 0;
 }
